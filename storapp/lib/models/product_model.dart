@@ -1,12 +1,14 @@
+// This class represents a product with its properties and rating information.
 class ProductModel {
-  final dynamic id;
-  final String title;
-  final double price;
-  final String description;
-  final String imageUrl;
-  final RatingModel rating;
+  final dynamic id;            // The unique identifier of the product.
+  final String title;          // The title or name of the product.
+  final double price;          // The price of the product.
+  final String description;    // A brief description of the product.
+  final String imageUrl;       // The URL of the image associated with the product.
+  final RatingModel rating;    // An instance of the RatingModel class representing the product's rating.
+  final String category;       // The category to which the product belongs.
 
-  final String category;
+  // Constructor to initialize the properties of the ProductModel class.
   ProductModel({
     required this.id,
     required this.title,
@@ -17,6 +19,7 @@ class ProductModel {
     required this.category,
   });
 
+  // Factory constructor to create a ProductModel instance from JSON data.
   factory ProductModel.fromJson(jsonData) {
     return ProductModel(
         id: jsonData['id'],
